@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static "form/style.css"%}">
+</head>
+<body>
+<h1>TrafficInsight AI <span id="me">by Marino ATOHOUN</span> </h1>
+<div id="containt">
+        <form action="" method="post" novalidate>
+            <h2>Prédire la densité du trafic</h2>
+                {% csrf_token %}
+                {{ inputform.as_p }}
+            <input type="submit" value="Envoyer">
+        </form>
+    <div id="presentation">
+            <section id="overview">
+            <h2>Description</h2>
+            <p>
+            TrafficInsight AI est un projet novateur visant à prédire la densité 
+            du trafic dans des environnements urbains futuristes. Grâce à 
+            l'utilisation de techniques avancées d'intelligence artificielle (IA), 
+            ce projet offre une solution précieuse pour comprendre et anticiper 
+            les conditions de circulation dans les villes modernes.
+             </p>
+        </section>
+        <section id="features">
+            <h2>Caractéristiques</h2>
+            <ul>
+                <li><strong>Ville :</strong> Nom de la ville (par exemple, MetropolisX, SolarisVille).</li>
+                <li><strong>Type de véhicule :</strong> Type de véhicule (par exemple, voiture, voiture volante).</li>
+                <li><strong>Conditions météorologiques :</strong> Météo actuelle (par exemple, clair, pluvieux).</li>
+                <li><strong>Conditions économiques :</strong> État économique de la ville (par exemple, boom, récession).</li>
+                <li><strong>Jour de la semaine :</strong> Jour de la semaine.</li>
+                <li><strong>Heure du jour :</strong> Heure de la journée à laquelle les données ont été enregistrées.</li>
+                <li><strong>Vitesse :</strong> Vitesse du véhicule enregistrée.</li>
+                <li><strong>Consommation d'énergie :</strong> Consommation d'énergie estimée en fonction du type et de la vitesse du véhicule.</li>
+                <li><strong>Est l'heure de pointe :</strong> Indicateur si l'enregistrement a eu lieu pendant les heures de pointe du trafic.</li>
+                <li><strong>Un événement aléatoire s'est produit :</strong> Indicateur si un événement aléatoire (par exemple, des accidents, des fermetures de routes) s'est produit.</li>
+                <li><strong>Densité du trafic :</strong> Densité du trafic au moment de l'enregistrement.</li>
+            </ul>
+        </section>
+        <section id="uses">
+            <h2>Utilisations potentielles</h2>
+            <p>Cet ensemble de données peut être utilisé pour diverses études et analyses, notamment :</p>
+            <ul>
+                <li>Comprendre les modèles de circulation dans des environnements urbains futuristes.</li>
+                <li>Analyser l'impact de facteurs tels que la météo, les conditions économiques et les types de véhicules sur la fluidité du trafic et la consommation d'énergie.</li>
+                <li>Développer et tester des algorithmes de gestion du trafic, notamment pour les véhicules autonomes et les solutions de ville intelligente.</li>
+            </ul>
+        </section>
+
+        <section>
+            <a href="{{ doc.doc.url }}">Voir Le dashboard réalisé avec PowerBI</a>
+        </section>
+
+        <section>
+            <h2>Dévéloppement</h2>
+            Ce projet commence par une analyse exploratoire des données 
+            à l'aide de Power BI, permettant une visualisation approfondie 
+            et une meilleure compréhension des tendances de trafic. Ensuite, 
+            en utilisant Jupyter et Python, un réseau de neurones MLPRegressor 
+            est créé pour prédire la densité du trafic.<br>
+            <br>
+            L'algorithme de prédiction entraîné sur ces données a atteint une 
+            précision remarquable de 77,48%, offrant ainsi une estimation fiable 
+            de la densité du trafic dans des contextes urbains variés. Cette 
+            prédiction précise permet de prendre des décisions éclairées en matière 
+            de gestion du trafic, d'optimisation des itinéraires et de planification des ressources.<br>
+            <br>
+            TrafficInsight AI offre ainsi une approche sophistiquée et efficace 
+            pour comprendre et anticiper les conditions de circulation dans les 
+            environnements urbains, ouvrant la voie à des solutions innovantes 
+            pour améliorer la fluidité du trafic et la qualité de vie des citoyens.<br>
+        </section>
+
+    </div>
+</div>
+</body>
+<footer>
+    <a href="{{ doc.linkdin }}" class="bouton">Suivez-moi sur Linkdin</a>
+    <a href="{{ doc.portfolio }}" class="bouton">Mom Portfolio</a>
+<footer>
+</html>

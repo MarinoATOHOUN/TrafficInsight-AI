@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <link rel="stylesheet" type="text/css" href="{% static "form/style.css"%}">
+    </head>
+    <header>
+    <a href="http://127.0.0.1:8000/form/" class="bouton">Go back</a>
+    </header>
+    <body class="result-body">
+        <div id="result-contain">
+            <p>
+                {% if roule == True %}
+                    <h1>Trafic routier:</h1> <h2>Densité : {{ resultat }}</h2>
+                {% else %}
+                    <h1>Trafic Aérien:</h1> <h2>Densité : {{ resultat }}</h2>
+                {% endif %}
+                NB : Le trafic est le nombre d'usagé(routier ou aérien)
+            </p>
+        </div>
+    </body>
+</html>
